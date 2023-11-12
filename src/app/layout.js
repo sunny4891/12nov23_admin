@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <Script src="/assets/vendor/echarts/echarts.min.js"></Script>
         <Script src="/assets/vendor/quill/quill.min.js"></Script>
         <Script src="/assets/vendor/simple-datatables/simple-datatables.js"></Script>
-        {/* <Script src="/assets/vendor/tinymce/tinymce.min.js"></Script> */}
+        <Script src="/assets/vendor/tinymce/tinymce.min.js"></Script>
         <Script src="/assets/vendor/php-email-form/validate.js"></Script>
         <Script src="/assets/js/main.js"></Script>
       </body>

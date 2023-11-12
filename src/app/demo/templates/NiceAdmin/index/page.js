@@ -10,7 +10,12 @@ export default function page() {
       >
         <div className="d-flex align-items-center justify-content-between">
           <a href="index.html" className="logo d-flex align-items-center">
-            <img src="/assets/img/logo.png" alt="true" />
+            <Image
+              height={24.5}
+              width={26}
+              src="/assets/img/logo.png"
+              alt="true"
+            />
             <span className="d-none d-lg-block">NiceAdmin</span>
           </a>
           <i className="bi bi-list toggle-sidebar-btn" />
@@ -139,7 +144,9 @@ export default function page() {
                 </li>
                 <li className="message-item">
                   <a href="#">
-                    <img
+                    <Image
+                      height={60}
+                      width={80}
                       src="/assets/img/messages-1.jpg"
                       alt
                       className="rounded-circle"
@@ -159,7 +166,9 @@ export default function page() {
                 </li>
                 <li className="message-item">
                   <a href="#">
-                    <img
+                    <Image
+                      height={60}
+                      width={80}
                       src="/assets/img/messages-2.jpg"
                       alt
                       className="rounded-circle"
@@ -179,7 +188,9 @@ export default function page() {
                 </li>
                 <li className="message-item">
                   <a href="#">
-                    <img
+                    <Image
+                      height={60}
+                      width={80}
                       src="/assets/img/messages-3.jpg"
                       alt
                       className="rounded-circle"
@@ -210,7 +221,9 @@ export default function page() {
                 href="#"
                 data-bs-toggle="dropdown"
               >
-                <img
+                <Image
+                  height={60}
+                  width={80}
                   src="/assets/img/profile-img.jpg"
                   alt="Profile"
                   className="rounded-circle"
@@ -973,7 +986,9 @@ export default function page() {
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <img
+                                <Image
+                                  height={60}
+                                  width={80}
                                   src="/assets/img/product-1.jpg"
                                   alt="true"
                                 />
@@ -991,7 +1006,9 @@ export default function page() {
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <img
+                                <Image
+                                  height={60}
+                                  width={80}
                                   src="/assets/img/product-2.jpg"
                                   alt="true"
                                 />
@@ -1009,7 +1026,9 @@ export default function page() {
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <img
+                                <Image
+                                  height={60}
+                                  width={80}
                                   src="/assets/img/product-3.jpg"
                                   alt="true"
                                 />
@@ -1027,7 +1046,9 @@ export default function page() {
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <img
+                                <Image
+                                  height={60}
+                                  width={80}
                                   src="/assets/img/product-4.jpg"
                                   alt="true"
                                 />
@@ -1045,7 +1066,9 @@ export default function page() {
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <img
+                                <Image
+                                  height={60}
+                                  width={80}
                                   src="/assets/img/product-5.jpg"
                                   alt="true"
                                 />
@@ -1275,7 +1298,12 @@ export default function page() {
                   </h5>
                   <div className="news">
                     <div className="post-item clearfix">
-                      <img src="/assets/img/news-1.jpg" alt="true" />
+                      <Image
+                        height={60}
+                        width={80}
+                        src="/assets/img/news-1.jpg"
+                        alt="true"
+                      />
                       <h4>
                         <a href="#">Nihil blanditiis at in nihil autem</a>
                       </h4>
@@ -1285,7 +1313,12 @@ export default function page() {
                       </p>
                     </div>
                     <div className="post-item clearfix">
-                      <img src="/assets/img/news-2.jpg" alt="true" />
+                      <Image
+                        height={60}
+                        width={80}
+                        src="/assets/img/news-2.jpg"
+                        alt="true"
+                      />
                       <h4>
                         <a href="#">Quidem autem et impedit</a>
                       </h4>
@@ -1295,7 +1328,12 @@ export default function page() {
                       </p>
                     </div>
                     <div className="post-item clearfix">
-                      <img src="/assets/img/news-3.jpg" alt="true" />
+                      <Image
+                        height={60}
+                        width={80}
+                        src="/assets/img/news-3.jpg"
+                        alt="true"
+                      />
                       <h4>
                         <a href="#">
                           Id quia et et ut maxime similique occaecati ut
@@ -1307,7 +1345,12 @@ export default function page() {
                       </p>
                     </div>
                     <div className="post-item clearfix">
-                      <img src="/assets/img/news-4.jpg" alt="true" />
+                      <Image
+                        height={60}
+                        width={80}
+                        src="/assets/img/news-4.jpg"
+                        alt="true"
+                      />
                       <h4>
                         <a href="#">Laborum corporis quo dara net para</a>
                       </h4>
@@ -1317,7 +1360,12 @@ export default function page() {
                       </p>
                     </div>
                     <div className="post-item clearfix">
-                      <img src="/assets/img/news-5.jpg" alt="true" />
+                      <Image
+                        height={60}
+                        width={80}
+                        src="/assets/img/news-5.jpg"
+                        alt="true"
+                      />
                       <h4>
                         <a href="#">Et dolores corrupti quae illo quod dolor</a>
                       </h4>

@@ -4,19 +4,18 @@ import React from "react";
 export default function page() {
   return (
     <>
-      {" "}
       <header
         id="header"
         className="header fixed-top d-flex align-items-center"
       >
         <div className="d-flex align-items-center justify-content-between">
           <a href="index.html" className="logo d-flex align-items-center">
-            <Image height={26} width={24.5} src="/assets/img/logo.png" alt="" />
+            <img src="/assets/img/logo.png" alt="true" />
             <span className="d-none d-lg-block">NiceAdmin</span>
           </a>
-          <i className="bi bi-list toggle-sidebar-btn"></i>
+          <i className="bi bi-list toggle-sidebar-btn" />
         </div>
-
+        {/* End Logo */}
         <div className="search-bar">
           <form
             className="search-form d-flex align-items-center"
@@ -30,29 +29,29 @@ export default function page() {
               title="Enter search keyword"
             />
             <button type="submit" title="Search">
-              <i className="bi bi-search"></i>
+              <i className="bi bi-search" />
             </button>
           </form>
         </div>
-
+        {/* End Search Bar */}
         <nav className="header-nav ms-auto">
           <ul className="d-flex align-items-center">
             <li className="nav-item d-block d-lg-none">
               <a className="nav-link nav-icon search-bar-toggle " href="#">
-                <i className="bi bi-search"></i>
+                <i className="bi bi-search" />
               </a>
             </li>
-
+            {/* End Search Icon*/}
             <li className="nav-item dropdown">
               <a
                 className="nav-link nav-icon"
                 href="#"
                 data-bs-toggle="dropdown"
               >
-                <i className="bi bi-bell"></i>
+                <i className="bi bi-bell" />
                 <span className="badge bg-primary badge-number">4</span>
               </a>
-
+              {/* End Notification Icon */}
               <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
                 <li className="dropdown-header">
                   You have 4 new notifications
@@ -65,55 +64,47 @@ export default function page() {
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li className="notification-item">
-                  <i className="bi bi-exclamation-circle text-warning"></i>
+                  <i className="bi bi-exclamation-circle text-warning" />
                   <div>
                     <h4>Lorem Ipsum</h4>
                     <p>Quae dolorem earum veritatis oditseno</p>
                     <p>30 min. ago</p>
                   </div>
                 </li>
-
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li className="notification-item">
-                  <i className="bi bi-x-circle text-danger"></i>
+                  <i className="bi bi-x-circle text-danger" />
                   <div>
                     <h4>Atque rerum nesciunt</h4>
                     <p>Quae dolorem earum veritatis oditseno</p>
                     <p>1 hr. ago</p>
                   </div>
                 </li>
-
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li className="notification-item">
-                  <i className="bi bi-check-circle text-success"></i>
+                  <i className="bi bi-check-circle text-success" />
                   <div>
                     <h4>Sit rerum fuga</h4>
                     <p>Quae dolorem earum veritatis oditseno</p>
                     <p>2 hrs. ago</p>
                   </div>
                 </li>
-
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li className="notification-item">
-                  <i className="bi bi-info-circle text-primary"></i>
+                  <i className="bi bi-info-circle text-primary" />
                   <div>
                     <h4>Dicta reprehenderit</h4>
                     <p>Quae dolorem earum veritatis oditseno</p>
                     <p>4 hrs. ago</p>
                   </div>
                 </li>
-
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
@@ -121,18 +112,19 @@ export default function page() {
                   <a href="#">Show all notifications</a>
                 </li>
               </ul>
+              {/* End Notification Dropdown Items */}
             </li>
-
+            {/* End Notification Nav */}
             <li className="nav-item dropdown">
               <a
                 className="nav-link nav-icon"
                 href="#"
                 data-bs-toggle="dropdown"
               >
-                <i className="bi bi-chat-left-text"></i>
+                <i className="bi bi-chat-left-text" />
                 <span className="badge bg-success badge-number">3</span>
               </a>
-
+              {/* End Messages Icon */}
               <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
                 <li className="dropdown-header">
                   You have 3 new messages
@@ -145,14 +137,11 @@ export default function page() {
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li className="message-item">
                   <a href="#">
-                    <Image
-                      height={50}
-                      width={50}
+                    <img
                       src="/assets/img/messages-1.jpg"
-                      alt=""
+                      alt
                       className="rounded-circle"
                     />
                     <div>
@@ -168,14 +157,11 @@ export default function page() {
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li className="message-item">
                   <a href="#">
-                    <Image
-                      height={50}
-                      width={50}
+                    <img
                       src="/assets/img/messages-2.jpg"
-                      alt=""
+                      alt
                       className="rounded-circle"
                     />
                     <div>
@@ -191,14 +177,11 @@ export default function page() {
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li className="message-item">
                   <a href="#">
-                    <Image
-                      height={50}
-                      width={50}
+                    <img
                       src="/assets/img/messages-3.jpg"
-                      alt=""
+                      alt
                       className="rounded-circle"
                     />
                     <div>
@@ -214,22 +197,20 @@ export default function page() {
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li className="dropdown-footer">
                   <a href="#">Show all messages</a>
                 </li>
               </ul>
+              {/* End Messages Dropdown Items */}
             </li>
-
+            {/* End Messages Nav */}
             <li className="nav-item dropdown pe-3">
               <a
                 className="nav-link nav-profile d-flex align-items-center pe-0"
                 href="#"
                 data-bs-toggle="dropdown"
               >
-                <Image
-                  height={50}
-                  width={50}
+                <img
                   src="/assets/img/profile-img.jpg"
                   alt="Profile"
                   className="rounded-circle"
@@ -238,11 +219,8 @@ export default function page() {
                   K. Anderson
                 </span>
               </a>
-
-              <ul
-                className="dropdown-menu dropdow
-n-menu-end dropdown-menu-arrow profile"
-              >
+              {/* End Profile Iamge Icon */}
+              <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                 <li className="dropdown-header">
                   <h6>Kevin Anderson</h6>
                   <span>Web Designer</span>
@@ -250,69 +228,70 @@ n-menu-end dropdown-menu-arrow profile"
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
                     href="users-profile.html"
                   >
-                    <i className="bi bi-person"></i>
+                    <i className="bi bi-person" />
                     <span>My Profile</span>
                   </a>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
                     href="users-profile.html"
                   >
-                    <i className="bi bi-gear"></i>
+                    <i className="bi bi-gear" />
                     <span>Account Settings</span>
                   </a>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
                     href="pages-faq.html"
                   >
-                    <i className="bi bi-question-circle"></i>
+                    <i className="bi bi-question-circle" />
                     <span>Need Help?</span>
                   </a>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
                     href="#"
                   >
-                    <i className="bi bi-box-arrow-right"></i>
+                    <i className="bi bi-box-arrow-right" />
                     <span>Sign Out</span>
                   </a>
                 </li>
               </ul>
+              {/* End Profile Dropdown Items */}
             </li>
+            {/* End Profile Nav */}
           </ul>
         </nav>
+        {/* End Icons Navigation */}
       </header>
+      {/* End Header */}
+      {/* ======= Sidebar ======= */}
       <aside id="sidebar" className="sidebar">
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
             <a className="nav-link " href="index.html">
-              <i className="bi bi-grid"></i>
+              <i className="bi bi-grid" />
               <span>Dashboard</span>
             </a>
           </li>
-
+          {/* End Dashboard Nav */}
           <li className="nav-item">
             <a
               className="nav-link collapsed"
@@ -320,9 +299,9 @@ n-menu-end dropdown-menu-arrow profile"
               data-bs-toggle="collapse"
               href="#"
             >
-              <i className="bi bi-menu-button-wide"></i>
+              <i className="bi bi-menu-button-wide" />
               <span>Components</span>
-              <i className="bi bi-chevron-down ms-auto"></i>
+              <i className="bi bi-chevron-down ms-auto" />
             </a>
             <ul
               id="components-nav"
@@ -331,91 +310,91 @@ n-menu-end dropdown-menu-arrow profile"
             >
               <li>
                 <a href="components-alerts.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Alerts</span>
                 </a>
               </li>
               <li>
                 <a href="components-accordion.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Accordion</span>
                 </a>
               </li>
               <li>
                 <a href="components-badges.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Badges</span>
                 </a>
               </li>
               <li>
                 <a href="components-breadcrumbs.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Breadcrumbs</span>
                 </a>
               </li>
               <li>
                 <a href="components-buttons.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Buttons</span>
                 </a>
               </li>
               <li>
                 <a href="components-cards.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Cards</span>
                 </a>
               </li>
               <li>
                 <a href="components-carousel.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Carousel</span>
                 </a>
               </li>
               <li>
                 <a href="components-list-group.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>List group</span>
                 </a>
               </li>
               <li>
                 <a href="components-modal.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Modal</span>
                 </a>
               </li>
               <li>
                 <a href="components-tabs.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Tabs</span>
                 </a>
               </li>
               <li>
                 <a href="components-pagination.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Pagination</span>
                 </a>
               </li>
               <li>
                 <a href="components-progress.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Progress</span>
                 </a>
               </li>
               <li>
                 <a href="components-spinners.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Spinners</span>
                 </a>
               </li>
               <li>
                 <a href="components-tooltips.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Tooltips</span>
                 </a>
               </li>
             </ul>
           </li>
-
+          {/* End Components Nav */}
           <li className="nav-item">
             <a
               className="nav-link collapsed"
@@ -423,9 +402,9 @@ n-menu-end dropdown-menu-arrow profile"
               data-bs-toggle="collapse"
               href="#"
             >
-              <i className="bi bi-journal-text"></i>
+              <i className="bi bi-journal-text" />
               <span>Forms</span>
-              <i className="bi bi-chevron-down ms-auto"></i>
+              <i className="bi bi-chevron-down ms-auto" />
             </a>
             <ul
               id="forms-nav"
@@ -434,31 +413,31 @@ n-menu-end dropdown-menu-arrow profile"
             >
               <li>
                 <a href="forms-elements.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Form Elements</span>
                 </a>
               </li>
               <li>
                 <a href="forms-layouts.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Form Layouts</span>
                 </a>
               </li>
               <li>
                 <a href="forms-editors.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Form Editors</span>
                 </a>
               </li>
               <li>
                 <a href="forms-validation.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Form Validation</span>
                 </a>
               </li>
             </ul>
           </li>
-
+          {/* End Forms Nav */}
           <li className="nav-item">
             <a
               className="nav-link collapsed"
@@ -466,9 +445,9 @@ n-menu-end dropdown-menu-arrow profile"
               data-bs-toggle="collapse"
               href="#"
             >
-              <i className="bi bi-layout-text-window-reverse"></i>
+              <i className="bi bi-layout-text-window-reverse" />
               <span>Tables</span>
-              <i className="bi bi-chevron-down ms-auto"></i>
+              <i className="bi bi-chevron-down ms-auto" />
             </a>
             <ul
               id="tables-nav"
@@ -477,19 +456,19 @@ n-menu-end dropdown-menu-arrow profile"
             >
               <li>
                 <a href="tables-general.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>General Tables</span>
                 </a>
               </li>
               <li>
                 <a href="tables-data.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Data Tables</span>
                 </a>
               </li>
             </ul>
           </li>
-
+          {/* End Tables Nav */}
           <li className="nav-item">
             <a
               className="nav-link collapsed"
@@ -497,9 +476,9 @@ n-menu-end dropdown-menu-arrow profile"
               data-bs-toggle="collapse"
               href="#"
             >
-              <i className="bi bi-bar-chart"></i>
+              <i className="bi bi-bar-chart" />
               <span>Charts</span>
-              <i className="bi bi-chevron-down ms-auto"></i>
+              <i className="bi bi-chevron-down ms-auto" />
             </a>
             <ul
               id="charts-nav"
@@ -508,25 +487,25 @@ n-menu-end dropdown-menu-arrow profile"
             >
               <li>
                 <a href="charts-chartjs.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Chart.js</span>
                 </a>
               </li>
               <li>
                 <a href="charts-apexcharts.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>ApexCharts</span>
                 </a>
               </li>
               <li>
                 <a href="charts-echarts.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>ECharts</span>
                 </a>
               </li>
             </ul>
           </li>
-
+          {/* End Charts Nav */}
           <li className="nav-item">
             <a
               className="nav-link collapsed"
@@ -534,9 +513,9 @@ n-menu-end dropdown-menu-arrow profile"
               data-bs-toggle="collapse"
               href="#"
             >
-              <i className="bi bi-gem"></i>
+              <i className="bi bi-gem" />
               <span>Icons</span>
-              <i className="bi bi-chevron-down ms-auto"></i>
+              <i className="bi bi-chevron-down ms-auto" />
             </a>
             <ul
               id="icons-nav"
@@ -545,77 +524,78 @@ n-menu-end dropdown-menu-arrow profile"
             >
               <li>
                 <a href="icons-bootstrap.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Bootstrap Icons</span>
                 </a>
               </li>
               <li>
                 <a href="icons-remix.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Remix Icons</span>
                 </a>
               </li>
               <li>
                 <a href="icons-boxicons.html">
-                  <i className="bi bi-circle"></i>
+                  <i className="bi bi-circle" />
                   <span>Boxicons</span>
                 </a>
               </li>
             </ul>
           </li>
-
+          {/* End Icons Nav */}
           <li className="nav-heading">Pages</li>
-
           <li className="nav-item">
             <a className="nav-link collapsed" href="users-profile.html">
-              <i className="bi bi-person"></i>
+              <i className="bi bi-person" />
               <span>Profile</span>
             </a>
           </li>
-
+          {/* End Profile Page Nav */}
           <li className="nav-item">
             <a className="nav-link collapsed" href="pages-faq.html">
-              <i className="bi bi-question-circle"></i>
+              <i className="bi bi-question-circle" />
               <span>F.A.Q</span>
             </a>
           </li>
-
+          {/* End F.A.Q Page Nav */}
           <li className="nav-item">
             <a className="nav-link collapsed" href="pages-contact.html">
-              <i className="bi bi-envelope"></i>
+              <i className="bi bi-envelope" />
               <span>Contact</span>
             </a>
           </li>
-
+          {/* End Contact Page Nav */}
           <li className="nav-item">
             <a className="nav-link collapsed" href="pages-register.html">
-              <i className="bi bi-card-list"></i>
+              <i className="bi bi-card-list" />
               <span>Register</span>
             </a>
           </li>
-
+          {/* End Register Page Nav */}
           <li className="nav-item">
             <a className="nav-link collapsed" href="pages-login.html">
-              <i className="bi bi-box-arrow-in-right"></i>
+              <i className="bi bi-box-arrow-in-right" />
               <span>Login</span>
             </a>
           </li>
-
+          {/* End Login Page Nav */}
           <li className="nav-item">
             <a className="nav-link collapsed" href="pages-error-404.html">
-              <i className="bi bi-dash-circle"></i>
+              <i className="bi bi-dash-circle" />
               <span>Error 404</span>
             </a>
           </li>
-
+          {/* End Error 404 Page Nav */}
           <li className="nav-item">
             <a className="nav-link collapsed" href="pages-blank.html">
-              <i className="bi bi-file-earmark"></i>
+              <i className="bi bi-file-earmark" />
               <span>Blank</span>
             </a>
           </li>
+          {/* End Blank Page Nav */}
         </ul>
       </aside>
+      {/* End Sidebar*/}
       <main id="main" className="main">
         <div className="pagetitle">
           <h1>Dashboard</h1>
@@ -628,22 +608,23 @@ n-menu-end dropdown-menu-arrow profile"
             </ol>
           </nav>
         </div>
-
+        {/* End Page Title */}
         <section className="section dashboard">
           <div className="row">
+            {/* Left side columns */}
             <div className="col-lg-8">
               <div className="row">
+                {/* Sales Card */}
                 <div className="col-xxl-4 col-md-6">
                   <div className="card info-card sales-card">
                     <div className="filter">
                       <a className="icon" href="#" data-bs-toggle="dropdown">
-                        <i className="bi bi-three-dots"></i>
+                        <i className="bi bi-three-dots" />
                       </a>
                       <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                         <li className="dropdown-header text-start">
                           <h6>Filter</h6>
                         </li>
-
                         <li>
                           <a className="dropdown-item" href="#">
                             Today
@@ -661,15 +642,13 @@ n-menu-end dropdown-menu-arrow profile"
                         </li>
                       </ul>
                     </div>
-
                     <div className="card-body">
                       <h5 className="card-title">
                         Sales <span>| Today</span>
                       </h5>
-
                       <div className="d-flex align-items-center">
                         <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                          <i className="bi bi-cart"></i>
+                          <i className="bi bi-cart" />
                         </div>
                         <div className="ps-3">
                           <h6>145</h6>
@@ -684,18 +663,18 @@ n-menu-end dropdown-menu-arrow profile"
                     </div>
                   </div>
                 </div>
-
+                {/* End Sales Card */}
+                {/* Revenue Card */}
                 <div className="col-xxl-4 col-md-6">
                   <div className="card info-card revenue-card">
                     <div className="filter">
                       <a className="icon" href="#" data-bs-toggle="dropdown">
-                        <i className="bi bi-three-dots"></i>
+                        <i className="bi bi-three-dots" />
                       </a>
                       <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                         <li className="dropdown-header text-start">
                           <h6>Filter</h6>
                         </li>
-
                         <li>
                           <a className="dropdown-item" href="#">
                             Today
@@ -713,15 +692,13 @@ n-menu-end dropdown-menu-arrow profile"
                         </li>
                       </ul>
                     </div>
-
                     <div className="card-body">
                       <h5 className="card-title">
                         Revenue <span>| This Month</span>
                       </h5>
-
                       <div className="d-flex align-items-center">
                         <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                          <i className="bi bi-currency-dollar"></i>
+                          <i className="bi bi-currency-dollar" />
                         </div>
                         <div className="ps-3">
                           <h6>$3,264</h6>
@@ -736,18 +713,18 @@ n-menu-end dropdown-menu-arrow profile"
                     </div>
                   </div>
                 </div>
-
+                {/* End Revenue Card */}
+                {/* Customers Card */}
                 <div className="col-xxl-4 col-xl-12">
                   <div className="card info-card customers-card">
                     <div className="filter">
                       <a className="icon" href="#" data-bs-toggle="dropdown">
-                        <i className="bi bi-three-dots"></i>
+                        <i className="bi bi-three-dots" />
                       </a>
                       <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                         <li className="dropdown-header text-start">
                           <h6>Filter</h6>
                         </li>
-
                         <li>
                           <a className="dropdown-item" href="#">
                             Today
@@ -765,15 +742,13 @@ n-menu-end dropdown-menu-arrow profile"
                         </li>
                       </ul>
                     </div>
-
                     <div className="card-body">
                       <h5 className="card-title">
                         Customers <span>| This Year</span>
                       </h5>
-
                       <div className="d-flex align-items-center">
                         <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                          <i className="bi bi-people"></i>
+                          <i className="bi bi-people" />
                         </div>
                         <div className="ps-3">
                           <h6>1244</h6>
@@ -788,18 +763,18 @@ n-menu-end dropdown-menu-arrow profile"
                     </div>
                   </div>
                 </div>
-
+                {/* End Customers Card */}
+                {/* Reports */}
                 <div className="col-12">
                   <div className="card">
                     <div className="filter">
                       <a className="icon" href="#" data-bs-toggle="dropdown">
-                        <i className="bi bi-three-dots"></i>
+                        <i className="bi bi-three-dots" />
                       </a>
                       <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                         <li className="dropdown-header text-start">
                           <h6>Filter</h6>
                         </li>
-
                         <li>
                           <a className="dropdown-item" href="#">
                             Today
@@ -817,81 +792,28 @@ n-menu-end dropdown-menu-arrow profile"
                         </li>
                       </ul>
                     </div>
-
                     <div className="card-body">
                       <h5 className="card-title">
                         Reports <span>/Today</span>
                       </h5>
-
-                      <div id="reportsChart"></div>
-
-                      {/* <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                      new ApexCharts(document.querySelector("#reportsChart"), {
-                        series: [{
-                          name: 'Sales',
-                          data: [31, 40, 28, 51, 42, 82, 56],
-                        }, {
-                          name: 'Revenue',
-                          data: [11, 32, 45, 32, 34, 52, 41]
-                        }, {
-                          name: 'Customers',
-                          data: [15, 11, 32, 18, 9, 24, 11]
-                        }],
-                        chart: {
-                          height: 350,
-                          type: 'area',
-                          toolbar: {
-                            show: false
-                          },
-                        },
-                        markers: {
-                          size: 4
-                        },
-                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
-                        fill: {
-                          type: "gradient",
-                          gradient: {
-                            shadeIntensity: 1,
-                            opacityFrom: 0.3,
-                            opacityTo: 0.4,
-                            stops: [0, 90, 100]
-                          }
-                        },
-                        dataLabels: {
-                          enabled: false
-                        },
-                        stroke: {
-                          curve: 'smooth',
-                          width: 2
-                        },
-                        xaxis: {
-                          type: 'datetime',
-                          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-                        },
-                        tooltip: {
-                          x: {
-                            format: 'dd/MM/yy HH:mm'
-                          },
-                        }
-                      }).render();
-                    });
-                  </script> */}
+                      {/* Line Chart */}
+                      <div id="reportsChart" />
+                      {/* End Line Chart */}
                     </div>
                   </div>
                 </div>
-
+                {/* End Reports */}
+                {/* Recent Sales */}
                 <div className="col-12">
                   <div className="card recent-sales overflow-auto">
                     <div className="filter">
                       <a className="icon" href="#" data-bs-toggle="dropdown">
-                        <i className="bi bi-three-dots"></i>
+                        <i className="bi bi-three-dots" />
                       </a>
                       <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                         <li className="dropdown-header text-start">
                           <h6>Filter</h6>
                         </li>
-
                         <li>
                           <a className="dropdown-item" href="#">
                             Today
@@ -909,12 +831,10 @@ n-menu-end dropdown-menu-arrow profile"
                         </li>
                       </ul>
                     </div>
-
                     <div className="card-body">
                       <h5 className="card-title">
                         Recent Sales <span>| Today</span>
                       </h5>
-
                       <table className="table table-borderless datatable">
                         <thead>
                           <tr>
@@ -1006,18 +926,18 @@ n-menu-end dropdown-menu-arrow profile"
                     </div>
                   </div>
                 </div>
-
+                {/* End Recent Sales */}
+                {/* Top Selling */}
                 <div className="col-12">
                   <div className="card top-selling overflow-auto">
                     <div className="filter">
                       <a className="icon" href="#" data-bs-toggle="dropdown">
-                        <i className="bi bi-three-dots"></i>
+                        <i className="bi bi-three-dots" />
                       </a>
                       <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                         <li className="dropdown-header text-start">
                           <h6>Filter</h6>
                         </li>
-
                         <li>
                           <a className="dropdown-item" href="#">
                             Today
@@ -1035,12 +955,10 @@ n-menu-end dropdown-menu-arrow profile"
                         </li>
                       </ul>
                     </div>
-
                     <div className="card-body pb-0">
                       <h5 className="card-title">
                         Top Selling <span>| Today</span>
                       </h5>
-
                       <table className="table table-borderless">
                         <thead>
                           <tr>
@@ -1055,11 +973,9 @@ n-menu-end dropdown-menu-arrow profile"
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <Image
-                                  height={50}
-                                  width={50}
+                                <img
                                   src="/assets/img/product-1.jpg"
-                                  alt=""
+                                  alt="true"
                                 />
                               </a>
                             </th>
@@ -1075,11 +991,9 @@ n-menu-end dropdown-menu-arrow profile"
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <Image
-                                  height={50}
-                                  width={50}
+                                <img
                                   src="/assets/img/product-2.jpg"
-                                  alt=""
+                                  alt="true"
                                 />
                               </a>
                             </th>
@@ -1095,11 +1009,9 @@ n-menu-end dropdown-menu-arrow profile"
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <Image
-                                  height={50}
-                                  width={50}
+                                <img
                                   src="/assets/img/product-3.jpg"
-                                  alt=""
+                                  alt="true"
                                 />
                               </a>
                             </th>
@@ -1115,11 +1027,9 @@ n-menu-end dropdown-menu-arrow profile"
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <Image
-                                  height={50}
-                                  width={50}
+                                <img
                                   src="/assets/img/product-4.jpg"
-                                  alt=""
+                                  alt="true"
                                 />
                               </a>
                             </th>
@@ -1135,11 +1045,9 @@ n-menu-end dropdown-menu-arrow profile"
                           <tr>
                             <th scope="row">
                               <a href="#">
-                                <Image
-                                  height={50}
-                                  width={50}
+                                <img
                                   src="/assets/img/product-5.jpg"
-                                  alt=""
+                                  alt="true"
                                 />
                               </a>
                             </th>
@@ -1157,20 +1065,22 @@ n-menu-end dropdown-menu-arrow profile"
                     </div>
                   </div>
                 </div>
+                {/* End Top Selling */}
               </div>
             </div>
-
+            {/* End Left side columns */}
+            {/* Right side columns */}
             <div className="col-lg-4">
+              {/* Recent Activity */}
               <div className="card">
                 <div className="filter">
                   <a className="icon" href="#" data-bs-toggle="dropdown">
-                    <i className="bi bi-three-dots"></i>
+                    <i className="bi bi-three-dots" />
                   </a>
                   <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li className="dropdown-header text-start">
                       <h6>Filter</h6>
                     </li>
-
                     <li>
                       <a className="dropdown-item" href="#">
                         Today
@@ -1188,16 +1098,14 @@ n-menu-end dropdown-menu-arrow profile"
                     </li>
                   </ul>
                 </div>
-
                 <div className="card-body">
                   <h5 className="card-title">
                     Recent Activity <span>| Today</span>
                   </h5>
-
                   <div className="activity">
                     <div className="activity-item d-flex">
                       <div className="activite-label">32 min</div>
-                      <i className="bi bi-circle-fill activity-badge text-success align-self-start"></i>
+                      <i className="bi bi-circle-fill activity-badge text-success align-self-start" />
                       <div className="activity-content">
                         Quia quae rerum{" "}
                         <a href="#" className="fw-bold text-dark">
@@ -1206,26 +1114,26 @@ n-menu-end dropdown-menu-arrow profile"
                         beatae
                       </div>
                     </div>
-
+                    {/* End activity item*/}
                     <div className="activity-item d-flex">
                       <div className="activite-label">56 min</div>
-                      <i className="bi bi-circle-fill activity-badge text-danger align-self-start"></i>
+                      <i className="bi bi-circle-fill activity-badge text-danger align-self-start" />
                       <div className="activity-content">
                         Voluptatem blanditiis blanditiis eveniet
                       </div>
                     </div>
-
+                    {/* End activity item*/}
                     <div className="activity-item d-flex">
                       <div className="activite-label">2 hrs</div>
-                      <i className="bi bi-circle-fill activity-badge text-primary align-self-start"></i>
+                      <i className="bi bi-circle-fill activity-badge text-primary align-self-start" />
                       <div className="activity-content">
                         Voluptates corrupti molestias voluptatem
                       </div>
                     </div>
-
+                    {/* End activity item*/}
                     <div className="activity-item d-flex">
                       <div className="activite-label">1 day</div>
-                      <i className="bi bi-circle-fill activity-badge text-info align-self-start"></i>
+                      <i className="bi bi-circle-fill activity-badge text-info align-self-start" />
                       <div className="activity-content">
                         Tempore autem saepe{" "}
                         <a href="#" className="fw-bold text-dark">
@@ -1234,37 +1142,38 @@ n-menu-end dropdown-menu-arrow profile"
                         tempore
                       </div>
                     </div>
-
+                    {/* End activity item*/}
                     <div className="activity-item d-flex">
                       <div className="activite-label">2 days</div>
-                      <i className="bi bi-circle-fill activity-badge text-warning align-self-start"></i>
+                      <i className="bi bi-circle-fill activity-badge text-warning align-self-start" />
                       <div className="activity-content">
                         Est sit eum reiciendis exercitationem
                       </div>
                     </div>
-
+                    {/* End activity item*/}
                     <div className="activity-item d-flex">
                       <div className="activite-label">4 weeks</div>
-                      <i className="bi bi-circle-fill activity-badge text-muted align-self-start"></i>
+                      <i className="bi bi-circle-fill activity-badge text-muted align-self-start" />
                       <div className="activity-content">
                         Dicta dolorem harum nulla eius. Ut quidem quidem sit
                         quas
                       </div>
                     </div>
+                    {/* End activity item*/}
                   </div>
                 </div>
               </div>
-
+              {/* End Recent Activity */}
+              {/* Budget Report */}
               <div className="card">
                 <div className="filter">
                   <a className="icon" href="#" data-bs-toggle="dropdown">
-                    <i className="bi bi-three-dots"></i>
+                    <i className="bi bi-three-dots" />
                   </a>
                   <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li className="dropdown-header text-start">
                       <h6>Filter</h6>
                     </li>
-
                     <li>
                       <a className="dropdown-item" href="#">
                         Today
@@ -1282,81 +1191,28 @@ n-menu-end dropdown-menu-arrow profile"
                     </li>
                   </ul>
                 </div>
-
                 <div className="card-body pb-0">
                   <h5 className="card-title">
                     Budget Report <span>| This Month</span>
                   </h5>
-
                   <div
                     id="budgetChart"
-                    style={{ minHeight: "400px" }}
+                    style={{ minHeight: 400 }}
                     className="echart"
-                  ></div>
-
-                  {/* <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
-                    legend: {
-                      data: ['Allocated Budget', 'Actual Spending']
-                    },
-                    radar: {
-                      // shape: 'circle',
-                      indicator: [{
-                          name: 'Sales',
-                          max: 6500
-                        },
-                        {
-                          name: 'Administration',
-                          max: 16000
-                        },
-                        {
-                          name: 'Information Technology',
-                          max: 30000
-                        },
-                        {
-                          name: 'Customer Support',
-                          max: 38000
-                        },
-                        {
-                          name: 'Development',
-                          max: 52000
-                        },
-                        {
-                          name: 'Marketing',
-                          max: 25000
-                        }
-                      ]
-                    },
-                    series: [{
-                      name: 'Budget vs spending',
-                      type: 'radar',
-                      data: [{
-                          value: [4200, 3000, 20000, 35000, 50000, 18000],
-                          name: 'Allocated Budget'
-                        },
-                        {
-                          value: [5000, 14000, 28000, 26000, 42000, 21000],
-                          name: 'Actual Spending'
-                        }
-                      ]
-                    }]
-                  });
-                });
-              </script> */}
+                  />
                 </div>
               </div>
-
+              {/* End Budget Report */}
+              {/* Website Traffic */}
               <div className="card">
                 <div className="filter">
                   <a className="icon" href="#" data-bs-toggle="dropdown">
-                    <i className="bi bi-three-dots"></i>
+                    <i className="bi bi-three-dots" />
                   </a>
                   <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li className="dropdown-header text-start">
                       <h6>Filter</h6>
                     </li>
-
                     <li>
                       <a className="dropdown-item" href="#">
                         Today
@@ -1374,85 +1230,28 @@ n-menu-end dropdown-menu-arrow profile"
                     </li>
                   </ul>
                 </div>
-
                 <div className="card-body pb-0">
                   <h5 className="card-title">
                     Website Traffic <span>| Today</span>
                   </h5>
-
                   <div
                     id="trafficChart"
-                    style={{ minHeight: "400px" }}
+                    style={{ minHeight: 400 }}
                     className="echart"
-                  ></div>
-
-                  {/* <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  echarts.init(document.querySelector("#trafficChart")).setOption({
-                    tooltip: {
-                      trigger: 'item'
-                    },
-                    legend: {
-                      top: '5%',
-                      left: 'center'
-                    },
-                    series: [{
-                      name: 'Access From',
-                      type: 'pie',
-                      radius: ['40%', '70%'],
-                      avoidLabelOverlap: false,
-                      label: {
-                        show: false,
-                        position: 'center'
-                      },
-                      emphasis: {
-                        label: {
-                          show: true,
-                          fontSize: '18',
-                          fontWeight: 'bold'
-                        }
-                      },
-                      labelLine: {
-                        show: false
-                      },
-                      data: [{
-                          value: 1048,
-                          name: 'Search Engine'
-                        },
-                        {
-                          value: 735,
-                          name: 'Direct'
-                        },
-                        {
-                          value: 580,
-                          name: 'Email'
-                        },
-                        {
-                          value: 484,
-                          name: 'Union Ads'
-                        },
-                        {
-                          value: 300,
-                          name: 'Video Ads'
-                        }
-                      ]
-                    }]
-                  })
-                });
-              </script> */}
+                  />
                 </div>
               </div>
-
+              {/* End Website Traffic */}
+              {/* News & Updates Traffic */}
               <div className="card">
                 <div className="filter">
                   <a className="icon" href="#" data-bs-toggle="dropdown">
-                    <i className="bi bi-three-dots"></i>
+                    <i className="bi bi-three-dots" />
                   </a>
                   <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li className="dropdown-header text-start">
                       <h6>Filter</h6>
                     </li>
-
                     <li>
                       <a className="dropdown-item" href="#">
                         Today
@@ -1470,20 +1269,13 @@ n-menu-end dropdown-menu-arrow profile"
                     </li>
                   </ul>
                 </div>
-
                 <div className="card-body pb-0">
                   <h5 className="card-title">
                     News &amp; Updates <span>| Today</span>
                   </h5>
-
                   <div className="news">
                     <div className="post-item clearfix">
-                      <Image
-                        height={60}
-                        width={80}
-                        src="/assets/img/news-1.jpg"
-                        alt=""
-                      />
+                      <img src="/assets/img/news-1.jpg" alt="true" />
                       <h4>
                         <a href="#">Nihil blanditiis at in nihil autem</a>
                       </h4>
@@ -1492,14 +1284,8 @@ n-menu-end dropdown-menu-arrow profile"
                         eligendi sed ut harum...
                       </p>
                     </div>
-
                     <div className="post-item clearfix">
-                      <Image
-                        height={60}
-                        width={80}
-                        src="/assets/img/news-2.jpg"
-                        alt=""
-                      />
+                      <img src="/assets/img/news-2.jpg" alt="true" />
                       <h4>
                         <a href="#">Quidem autem et impedit</a>
                       </h4>
@@ -1508,14 +1294,8 @@ n-menu-end dropdown-menu-arrow profile"
                         elan dries werona nande...
                       </p>
                     </div>
-
                     <div className="post-item clearfix">
-                      <Image
-                        height={60}
-                        width={80}
-                        src="/assets/img/news-3.jpg"
-                        alt=""
-                      />
+                      <img src="/assets/img/news-3.jpg" alt="true" />
                       <h4>
                         <a href="#">
                           Id quia et et ut maxime similique occaecati ut
@@ -1526,14 +1306,8 @@ n-menu-end dropdown-menu-arrow profile"
                         sed ipsam et totam...
                       </p>
                     </div>
-
                     <div className="post-item clearfix">
-                      <Image
-                        height={60}
-                        width={80}
-                        src="/assets/img/news-4.jpg"
-                        alt=""
-                      />
+                      <img src="/assets/img/news-4.jpg" alt="true" />
                       <h4>
                         <a href="#">Laborum corporis quo dara net para</a>
                       </h4>
@@ -1542,14 +1316,8 @@ n-menu-end dropdown-menu-arrow profile"
                         repellendusvel rerum cuder...
                       </p>
                     </div>
-
                     <div className="post-item clearfix">
-                      <Image
-                        height={60}
-                        width={80}
-                        src="/assets/img/news-5.jpg"
-                        alt=""
-                      />
+                      <img src="/assets/img/news-5.jpg" alt="true" />
                       <h4>
                         <a href="#">Et dolores corrupti quae illo quod dolor</a>
                       </h4>
@@ -1559,39 +1327,42 @@ n-menu-end dropdown-menu-arrow profile"
                       </p>
                     </div>
                   </div>
+                  {/* End sidebar recent posts*/}
                 </div>
               </div>
+              {/* End News & Updates */}
             </div>
+            {/* End Right side columns */}
           </div>
         </section>
       </main>
+      {/* End #main */}
+      {/* ======= Footer ======= */}
       <footer id="footer" className="footer">
         <div className="copyright">
-          &copy; Copyright{" "}
+          © Copyright{" "}
           <strong>
             <span>NiceAdmin</span>
           </strong>
           . All Rights Reserved
         </div>
         <div className="credits">
+          {/* All the links in the footer should remain intact. */}
+          {/* You can delete the links only if you purchased the pro version. */}
+          {/* Licensing information: https://bootstrapmade.com/license/ */}
+          {/* Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ */}
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </footer>
+      {/* End Footer */}
       <a
         href="#"
         className="back-to-top d-flex align-items-center justify-content-center"
       >
-        <i className="bi bi-arrow-up-short"></i>
+        <i className="bi bi-arrow-up-short" />
       </a>
-      <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/vendor/chart.js/chart.umd.js"></script>
-      <script src="assets/vendor/echarts/echarts.min.js"></script>
-      <script src="assets/vendor/quill/quill.min.js"></script>
-      <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-      <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-      <script src="assets/vendor/php-email-form/validate.js"></script>
-      <script src="assets/js/main.js"></script>
+      {/* Vendor JS Files */}
+      {/* Template Main JS File */}
     </>
   );
 }

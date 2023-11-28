@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { APP_BRAND_WEBSITE_URL, APP_NAME } from "../helpers/page";
 
 export default function Home() {
   return (
@@ -30,11 +31,9 @@ export default function Home() {
                     <div className="card-body">
                       <div className="pt-4 pb-2">
                         <h5 className="card-title text-center pb-0 fs-4">
-                          Login to Your Account
+                          Login
                         </h5>
-                        <p className="text-center small">
-                          Enter your username &amp; password to login
-                        </p>
+                        <p className="text-center small"></p>
                       </div>
                       <form className="row g-3 needs-validation" noValidate>
                         <div className="col-12">
@@ -101,12 +100,6 @@ export default function Home() {
                             Login
                           </Link>
                         </div>
-                        <div className="col-12">
-                          <p className="small mb-0">
-                            Don't have account?{" "}
-                            <a href="pages-register.html">Create an account</a>
-                          </p>
-                        </div>
                       </form>
                     </div>
                   </div>
@@ -115,8 +108,7 @@ export default function Home() {
                     {/* You can delete the links only if you purchased the pro version. */}
                     {/* Licensing information: https://bootstrapmade.com/license/ */}
                     {/* Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ */}
-                    Designed by{" "}
-                    <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    Designed by <a href={APP_BRAND_WEBSITE_URL}>{APP_NAME}</a>
                   </div>
                 </div>
               </div>

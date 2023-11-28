@@ -30,22 +30,22 @@ export default function Aside() {
               data-bs-parent="#sidebar-nav"
             >
               <li>
-                <Link href="/admin/startPurchase">
+                <Link href="/admin/startpurchase">
                   <i className="bi bi-circle" />
                   <span>Start</span>
                 </Link>
               </li>
               <li>
-                <Link href="/admin/components-accordion">
+                <Link href="/admin/inprogresspurchase">
                   <i className="bi bi-circle" />
                   <span>InProgress</span>
                 </Link>
               </li>
               <li>
-                <a href="components-badges.html">
+                <Link href="/admin/completed">
                   <i className="bi bi-circle" />
                   <span>Completed</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </li>

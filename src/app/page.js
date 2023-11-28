@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { APP_BRAND_WEBSITE_URL, APP_NAME } from "../helpers/page";
+import { APP_BRAND, APP_BRAND_WEBSITE_URL, APP_NAME } from "../helpers/page";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
                         src="/assets/img/logo.png"
                         alt="true"
                       />
-                      <span className="d-none d-lg-block">NiceAdmin</span>
+                      <span className="d-none d-lg-block">{APP_BRAND}</span>
                     </a>
                   </div>
                   {/* End Logo */}
@@ -104,11 +104,10 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="credits">
-                    {/* All the links in the footer should remain intact. */}
-                    {/* You can delete the links only if you purchased the pro version. */}
-                    {/* Licensing information: https://bootstrapmade.com/license/ */}
-                    {/* Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ */}
-                    Designed by <a href={APP_BRAND_WEBSITE_URL}>{APP_NAME}</a>
+                    Designed by{" "}
+                    <a href={APP_BRAND_WEBSITE_URL} target="blank">
+                      {APP_NAME}
+                    </a>
                   </div>
                 </div>
               </div>

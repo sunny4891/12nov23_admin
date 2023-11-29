@@ -437,7 +437,7 @@ export default function page() {
       fk_ac: "AVIJIT_799999",
       prod_link: "HITACHI 80 CM PRODUCT FOR SAMSUNG",
       cc_number: "4444 4444 4444",
-      cc_holder_name: "AVIJIT Saha",
+      cc_holder_name: "Archita Saha",
       gift_amt: "1200",
       tx_amt: "123",
       final_price: "15000",
@@ -492,6 +492,39 @@ export default function page() {
     link.click();
   };
 
+  const filteredItems = data
+    .filter(
+      (item) =>
+        (item.fk_ac &&
+          item.fk_ac.toLowerCase().includes(filterText.toLowerCase())) ||
+        (item.cc_holder_name &&
+          item.cc_holder_name.toLowerCase().includes(filterText.toLowerCase()))
+    )
+    .map((user) => {
+      return {
+        id: user.id,
+        fk_ac: user.fk_ac,
+        prod_link: user.prod_link,
+        cc_number: user.cc_number,
+        cc_holder_name: user.cc_holder_name,
+        gift_amt: user.gift_amt,
+        tx_amt: user.tx_amt,
+        final_price: user.final_price,
+        gift_otp: user.gift_otp,
+        purchase_otp: user.purchase_otp,
+        remark: user.remark,
+        purchase_stated_at: user.purchase_stated_at,
+        status: user.status,
+        action: user.action,
+      };
+    });
+
+  const handleClear = () => {
+    if (filterText) {
+      setFilterText("");
+    }
+  };
+
   const Export = ({ onExport }) => (
     <button
       className="btn btn-sm btn-primary"
@@ -505,6 +538,7 @@ export default function page() {
     () => <Export onExport={() => downloadCSV(data)} />,
     []
   );
+
   return (
     <main id="main" className="main">
       {/* End Page Title */}
@@ -514,11 +548,22 @@ export default function page() {
           <div className="col-lg-12">
             <div className="card">
               <div className="card-body">
+                <div className="d-flex justify-content-center mt-2 col-md-12">
+                  <input
+                    type="search"
+                    placeholder="Search"
+                    value={filterText}
+                    onChange={(e) => setFilterText(e.target.value)}
+                  />
+                  <button className="btn btn-sm btn-info" onClick={handleClear}>
+                    x
+                  </button>
+                </div>
                 <DataTable
                   title="Purchase Completed"
                   pagination
                   columns={columns}
-                  data={data}
+                  data={filteredItems}
                   selectableRows
                   actions={actionsMemo}
                   defaultSortFieldId="ID"

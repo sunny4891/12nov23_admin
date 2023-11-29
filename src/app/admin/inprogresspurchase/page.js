@@ -1,77 +1,73 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+
 import BreadCrumb from "../../../components/layout/BreadCrumb";
-import DataTable from "react-data-table-component";
+// import DataTable from "react-data-table-component";
+
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
+import { Button } from "primereact/button";
+import { Tooltip } from "primereact/tooltip";
+
 export default function page() {
-  const columns = [
+  const [products, setProducts] = useState([]);
+  const dt = useRef(null);
+  const cols = [
     {
-      name: "ID",
-      selector: (row) => row.id,
+      header: "ID",
+      field: "id",
     },
     {
-      name: "FK Account",
-      selector: (row) => row.fk_ac,
+      header: "FK Account",
+      field: "fk_ac",
     },
     {
-      name: "Product Link",
-      selector: (row) => row.prod_link,
+      header: "Product Link",
+      field: "prod_link",
     },
     {
-      name: "CC Account",
-      selector: (row) => row.cc_number,
+      header: "CC Account",
+      field: "cc_number",
     },
     {
-      name: "CC Holder Name",
-      selector: (row) => row.cc_holder_name,
+      header: "CC Holder Name",
+      field: "cc_holder_name",
     },
     {
-      name: "Gift Amount",
-      selector: (row) => row.gift_amt,
+      header: "Gift Amount",
+      field: "gift_amt",
     },
     {
-      name: "TSX Amount",
-      selector: (row) => row.tx_amt,
+      header: "TSX Amount",
+      field: "tx_amt",
     },
     {
-      name: "Final Price",
-      selector: (row) => row.final_price,
+      header: "Final Price",
+      field: "final_price",
     },
     {
-      name: "Gift OTP",
-      selector: (row) => row.gift_otp,
+      header: "Gift OTP",
+      field: "gift_otp",
     },
     {
-      name: "Purchase OTP",
-      selector: (row) => row.purchase_otp,
+      header: "Purchase OTP",
+      field: "purchase_otp",
     },
     {
-      name: "Remark",
-      selector: (row) => row.remark,
+      header: "Remark",
+      field: "remark",
     },
     {
-      name: "Purchase Stated At",
-      selector: (row) => row.purchase_stated_at,
+      header: "Purchase Stated At",
+      field: "purchase_stated_at",
     },
     {
-      name: "Status",
-      selector: (row) => row.status,
-      cell: (row) => {
-        return <span class="badge badge-primary text-danger">Pending</span>;
-      },
+      header: "Status",
+      field: "status",
     },
     {
-      name: "Action",
-      selector: (row) => row.action,
-      cell: (row) => {
-        return (
-          <button
-            className="btn btn-sm btn-danger"
-            onClick={(e) => alert("Hello")}
-          >
-            Delete
-          </button>
-        );
-      },
+      header: "Action",
+      field: "action",
     },
   ];
 
@@ -432,6 +428,89 @@ export default function page() {
     },
   ];
 
+  const exportColumns = cols.map((col) => ({
+    title: col.header,
+    dataKey: col.field,
+  }));
+
+  useEffect(() => {
+    setProducts(data);
+  }, []);
+
+  const exportCSV = (selectionOnly) => {
+    dt.current.exportCSV({ selectionOnly });
+  };
+
+  const exportPdf = () => {
+    import("jspdf").then((jsPDF) => {
+      import("jspdf-autotable").then(() => {
+        const doc = new jsPDF.default(0, 0);
+
+        doc.autoTable(exportColumns, products);
+        doc.save("products.pdf");
+      });
+    });
+  };
+
+  const exportExcel = () => {
+    import("xlsx").then((xlsx) => {
+      const worksheet = xlsx.utils.json_to_sheet(products);
+      const workbook = { Sheets: { data: worksheet }, SheetNames: ["data"] };
+      const excelBuffer = xlsx.write(workbook, {
+        bookType: "xlsx",
+        type: "array",
+      });
+
+      saveAsExcelFile(excelBuffer, "products");
+    });
+  };
+
+  const saveAsExcelFile = (buffer, fileName) => {
+    import("file-saver").then((module) => {
+      if (module && module.default) {
+        let EXCEL_TYPE =
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
+        let EXCEL_EXTENSION = ".xlsx";
+        const data = new Blob([buffer], {
+          type: EXCEL_TYPE,
+        });
+
+        module.default.saveAs(
+          data,
+          fileName + "_export_" + new Date().getTime() + EXCEL_EXTENSION
+        );
+      }
+    });
+  };
+
+  const header = (
+    <div className="flex align-items-center justify-content-end gap-2">
+      <Button
+        type="button"
+        icon="pi pi-file"
+        rounded
+        onClick={() => exportCSV(false)}
+        data-pr-tooltip="CSV"
+      />
+      <Button
+        type="button"
+        icon="pi pi-file-excel"
+        severity="success"
+        rounded
+        onClick={exportExcel}
+        data-pr-tooltip="XLS"
+      />
+      <Button
+        type="button"
+        icon="pi pi-file-pdf"
+        severity="warning"
+        rounded
+        onClick={exportPdf}
+        data-pr-tooltip="PDF"
+      />
+    </div>
+  );
+
   return (
     <main id="main" className="main">
       {/* End Page Title */}
@@ -441,12 +520,18 @@ export default function page() {
           <div className="col-lg-12">
             <div className="card">
               <div className="card-body">
+                <Tooltip target=".export-buttons>button" position="bottom" />
+
                 <DataTable
-                  title="Purchase In Progress"
-                  pagination
-                  columns={columns}
-                  data={data}
-                />
+                  ref={dt}
+                  value={products}
+                  header={header}
+                  tableStyle={{ minWidth: "50rem" }}
+                >
+                  {cols.map((col, index) => (
+                    <Column key={index} field={col.field} header={col.header} />
+                  ))}
+                </DataTable>
               </div>
             </div>
           </div>

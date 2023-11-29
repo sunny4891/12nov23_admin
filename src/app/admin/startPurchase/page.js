@@ -9,6 +9,7 @@ export default function page() {
       <main id="main" className="main">
         {/* End Page Title */}
         <BreadCrumb />
+
         <section className="section dashboard">
           <div className="row">
             <div className="col-lg-12">

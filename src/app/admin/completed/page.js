@@ -10,52 +10,65 @@ export default function page() {
 
   const columns = [
     {
+      id: "ID",
       name: "ID",
       selector: (row) => row.id,
+      sortable: true,
     },
     {
       name: "FK Account",
       selector: (row) => row.fk_ac,
+      sortable: true,
     },
     {
       name: "Product Link",
       selector: (row) => row.prod_link,
+      sortable: true,
     },
     {
       name: "CC Account",
       selector: (row) => row.cc_number,
+      sortable: true,
     },
     {
       name: "CC Holder Name",
       selector: (row) => row.cc_holder_name,
+      sortable: true,
     },
     {
       name: "Gift Amount",
       selector: (row) => row.gift_amt,
+      sortable: true,
     },
     {
       name: "TSX Amount",
       selector: (row) => row.tx_amt,
+      sortable: true,
     },
     {
       name: "Final Price",
       selector: (row) => row.final_price,
+      sortable: true,
     },
     {
       name: "Gift OTP",
       selector: (row) => row.gift_otp,
+      sortable: true,
     },
     {
       name: "Purchase OTP",
       selector: (row) => row.purchase_otp,
+      sortable: true,
     },
     {
       name: "Remark",
       selector: (row) => row.remark,
+      sortable: true,
     },
     {
       name: "Purchase Stated At",
       selector: (row) => row.purchase_stated_at,
+      sortable: true,
     },
     {
       name: "Status",
@@ -421,13 +434,13 @@ export default function page() {
     },
     {
       id: i++,
-      fk_ac: "PRASENJIT_799999",
-      prod_link: "SAMSUNG 80 CM PRODUCT FOR SAMSUNG",
-      cc_number: "5555 5555 5555",
-      cc_holder_name: "Prasenjit Saha",
-      gift_amt: "12300",
+      fk_ac: "AVIJIT_799999",
+      prod_link: "HITACHI 80 CM PRODUCT FOR SAMSUNG",
+      cc_number: "4444 4444 4444",
+      cc_holder_name: "AVIJIT Saha",
+      gift_amt: "1200",
       tx_amt: "123",
-      final_price: "12423",
+      final_price: "15000",
       gift_otp: "123456",
       purchase_otp: "123456",
       remark: "",
@@ -508,6 +521,8 @@ export default function page() {
                   data={data}
                   selectableRows
                   actions={actionsMemo}
+                  defaultSortFieldId="ID"
+                  defaultSortAsc={false}
                 />
               </div>
             </div>
